@@ -1,0 +1,15 @@
+.idea/
+target/
+.classpath
+.project
+.settings/
+*Thrash*
+
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+bin/
