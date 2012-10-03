@@ -728,10 +728,21 @@ public class Readability {
 		}
 	}
 
+	/**
+	 * Print debug logs
+	 * 
+	 * @param msg
+	 */
 	protected void dbg(String msg) {
 		dbg(msg, null);
 	}
 
+	/**
+	 * Print debug logs with stack trace
+	 * 
+	 * @param msg
+	 * @param t
+	 */
 	protected void dbg(String msg, Throwable t) {
 		System.out.println(msg + (t != null ? ("\n" + t.getMessage()) : "")
 				+ (t != null ? ("\n" + t.getStackTrace()) : ""));
