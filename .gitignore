@@ -1,15 +1,19 @@
-.idea/
-target/
-.classpath
+#Eclipse
 .project
-.settings/
-*Thrash*
+.classpath
+.settings
+.checkstyle
 
-*.class
+#IntelliJ IDEA
+.idea
+*.iml
+*.ipr
+*.iws
 
-# Package Files #
-*.jar
-*.war
-*.ear
+#Maven
+target
+release.properties
+pom.xml.*
 
-bin/
+#OSX
+.DS_Store
