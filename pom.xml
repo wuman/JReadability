@@ -8,7 +8,7 @@
         <version>7</version>
     </parent>
 
-    <groupId>com.wuman</groupId>
+    <groupId>com.wu-man</groupId>
     <artifactId>jreadability</artifactId>
     <version>1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
