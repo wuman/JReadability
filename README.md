@@ -51,6 +51,21 @@ methods.  For instance, on Android you may choose to do this:
     };
 
 
+INCLUDING IN YOUR PROJECT
+-------------------------
+
+There are two ways to include JReadability in your projects:
+
+1. You can download the released jar file in the [Downloads section](https://github.com/wuman/JReadability/downloads).
+2. If you use Maven to build your project you can simply add a dependency to this library.
+
+        <dependency>
+            <groupId>com.wu-man</groupId>
+            <artifactId>jreadability</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+
 DEPENDENCY
 ----------
 
