@@ -157,8 +157,8 @@
         <url>https://github.com/wuman/JReadability</url>
         <connection>scm:git:git://github.com/wuman/JReadability.git</connection>
         <developerConnection>scm:git:git@github.com:wuman/JReadability.git</developerConnection>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <prerequisites>
         <maven>3.0.3</maven>
