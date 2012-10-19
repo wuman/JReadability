@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wu-man</groupId>
@@ -16,21 +17,34 @@
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
-            <version>1.7.1</version>
+            <version>${jsoup.version}</version>
         </dependency>
     </dependencies>
 
     <parent>
         <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>                                                                                       
+        <artifactId>oss-parent</artifactId>
         <version>7</version>
     </parent>
 
     <properties>
-        <java.version>1.6</java.version>
-        <junit.version>4.10</junit.version>    
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <github.global.server>github</github.global.server>
+
+        <maven.version>3.0.3</maven.version>
+        <java.version>1.6</java.version>
+        <junit.version>4.10</junit.version>
+        <maven-compiler.version>2.5.1</maven-compiler.version>
+        <maven-source.version>2.2.1</maven-source.version>
+        <maven-javadoc.version>2.9</maven-javadoc.version>
+        <maven-eclipse.version>2.9</maven-eclipse.version>
+        <maven-release.version>2.3.2</maven-release.version>
+        <maven-gpg.version>1.4</maven-gpg.version>
+        <github-downloads.version>0.6</github-downloads.version>
+
+        <jsoup.version>1.7.1</jsoup.version>
+        <commons-io.version>2.4</commons-io.version>
     </properties>
 
     <build>
@@ -38,7 +52,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
+                <version>${maven-compiler.version}</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -47,7 +61,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.2.1</version>
+                <version>${maven-source.version}</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -60,7 +74,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9</version>
+                <version>${maven-javadoc.version}</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -73,7 +87,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-eclipse-plugin</artifactId>
-                <version>2.9</version>
+                <version>${maven-eclipse.version}</version>
                 <configuration>
                     <downloadJavadocs>true</downloadJavadocs>
                 </configuration>
@@ -81,7 +95,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>${maven-release.version}</version>
                 <configuration>
                     <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
                 </configuration>
@@ -89,7 +103,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.4</version>
+                <version>${maven-gpg.version}</version>
                 <configuration>
                     <passphrase>${gpg.passphrase}</passphrase>
                 </configuration>
@@ -107,9 +121,10 @@
             <plugin>
                 <groupId>com.github.github</groupId>
                 <artifactId>downloads-maven-plugin</artifactId>
-                <version>0.6</version>
+                <version>${github-downloads.version}</version>
                 <configuration>
-                    <description>${project.version} release of ${project.name}</description>
+                    <description>${project.version} release of
+                        ${project.name}</description>
                     <override>true</override>
                     <includeAttached>true</includeAttached>
                 </configuration>
@@ -169,7 +184,7 @@
     </scm>
 
     <prerequisites>
-        <maven>3.0.3</maven>
+        <maven>${maven.version}</maven>
     </prerequisites>
 
     <distributionManagement>
