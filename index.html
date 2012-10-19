@@ -1,142 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>JReadability by wuman</title>
+    
+    <head>
+        <script src="https://raw.github.com/jeromegn/DocumentUp/master/documentup.min.js"></script>
+        <script>
+            DocumentUp.document({
+                repo: "wuman/JReadability",
+                name: "JReadability",
+                twitter: ["wuman"],
+                issues: true,
+                travis: true,
+                google_analytics: "UA-4156099-13"
+            });
+        </script>
+    </head>
+    
+    <body></body>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">JReadability</h1>
-        <p class="header">Making Web Content Easy-to-Read on Android</p>
-
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/wuman/JReadability/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/wuman/JReadability/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/wuman/JReadability">View On GitHub</a></li>
-        </ul>
-
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/wuman">wuman</a></p>
-
-
-      </header>
-      <section>
-        <h1>JReadability</h1>
-
-<p>Author: David Wu <a href="mailto:david@wu-man.com">david@wu-man.com</a> <a href="http://blog.wu-man.com">http://blog.wu-man.com</a></p>
-
-<h2>ABOUT</h2>
-
-<p>JReadability is a Java library that parses HTML as input and returns clean,
-easy-to-read text.</p>
-
-<p>JReadability is a Java port of <a href="http://arc90.com/">arc90</a>'s original 
-Javascript project <a href="http://code.google.com/p/arc90labs-readability/">Readability</a>.
-(The original Readability.js project is now migrated to become a server-side
-platform which as far as I know is no longer open source.)</p>
-
-<h2>EXAMPLES</h2>
-
-<p>Instantiate the <code>Readability</code> class via any one of the provided constructors,
-depending on where the interested HTML page is from:</p>
-
-<pre><code>Readability readability = new Readability(html); // String
-Readability readability = new Readability(url, timeoutMillis);  // URL
-</code></pre>
-
-<p>Start content extraction by running:</p>
-
-<pre><code>readability.init();
-</code></pre>
-
-<p>The output is clean, readable content in HTML format.  You can obtain the
-output with:</p>
-
-<pre><code>String cleanHtml = readability.outerHtml();
-</code></pre>
-
-<p>By default debug logs are printed using <code>System.out.println()</code>.  You may
-alternatively use your own logging mechanisms by overriding the <code>dbg()</code> 
-methods.  For instance, on Android you may choose to do this:</p>
-
-<pre><code>Readability readability = new Readability(html) {
-    @Override
-    protected void dbg(String msg) {
-        Log.d(LOG_TAG, msg);
-    }
-
-    @Override
-    protected void dbg(String msg, Throwable t) {
-        Log.e(LOG_TAG, msg, t);
-    }
-};
-</code></pre>
-
-<h2>INCLUDING IN YOUR PROJECT</h2>
-
-<p>There are two ways to include JReadability in your projects:</p>
-
-<ol>
-<li>You can download the released jar file in the <a href="https://github.com/wuman/JReadability/downloads">Downloads section</a>.</li>
-<li>
-<p>If you use Maven to build your project you can simply add a dependency to this library.</p>
-
-<pre><code>&lt;dependency&gt;
-    &lt;groupId&gt;com.wu-man&lt;/groupId&gt;
-    &lt;artifactId&gt;jreadability&lt;/artifactId&gt;
-    &lt;version&gt;1.3&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre>
-</li>
-</ol><h2>DEPENDENCY</h2>
-
-<p>JReadability depends on the <a href="https://github.com/jhy/jsoup/">jsoup</a> library.</p>
-
-<h2>REFERENCE</h2>
-
-<ul>
-<li><a href="http://blog.wu-man.com/2012/10/introducing-jreadability-making-web.html">blog post</a></li>
-<li>arc90's <a href="http://code.google.com/p/arc90labs-readability/">readability project</a>
-</li>
-<li>fivefilters <a href="http://code.fivefilters.org/php-readability">php-readability</a>
-</li>
-<li>jhy's <a href="https://github.com/jhy/jsoup/">jsoup</a> parser</li>
-</ul><h2>CONTRIBUTE</h2>
-
-<p>If you would like to contribute code to JReadability you can do so through 
-GitHub by forking the repository and sending a pull request.</p>
-
-<h2>LICENSE</h2>
-
-<pre><code>Copyright 2012 David Wu
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software 
-distributed under the License is distributed on an "AS IS" BASIS, 
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and 
-limitations under the License.
-</code></pre>
-      </section>
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
-  </body>
 </html>
+
