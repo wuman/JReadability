@@ -42,6 +42,7 @@
         <maven-release.version>2.3.2</maven-release.version>
         <maven-gpg.version>1.4</maven-gpg.version>
         <github-downloads.version>0.6</github-downloads.version>
+        <github-site-upload.version>0.6</github-site-upload.version>
 
         <jsoup.version>1.7.1</jsoup.version>
         <commons-io.version>2.4</commons-io.version>
@@ -134,6 +135,23 @@
                             <goal>upload</goal>
                         </goals>
                         <phase>install</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>${github-site-upload.version}</version>
+                <configuration>
+                    <message>Creating site for ${project.version}</message>
+                    <outputDirectory>src/site</outputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>site</phase>
                     </execution>
                 </executions>
             </plugin>
