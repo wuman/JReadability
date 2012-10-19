@@ -3,7 +3,7 @@
 
     <groupId>com.wu-man</groupId>
     <artifactId>jreadability</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
 
     <dependencies>
@@ -157,7 +157,7 @@
         <url>https://github.com/wuman/JReadability</url>
         <connection>scm:git:git://github.com/wuman/JReadability.git</connection>
         <developerConnection>scm:git:git@github.com:wuman/JReadability.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>jreadability-1.2</tag>
     </scm>
 
     <prerequisites>
