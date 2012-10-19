@@ -62,7 +62,7 @@ There are two ways to include JReadability in your projects:
         <dependency>
             <groupId>com.wu-man</groupId>
             <artifactId>jreadability</artifactId>
-            <version>1.1</version>
+            <version>1.3</version>
         </dependency>
 
 
