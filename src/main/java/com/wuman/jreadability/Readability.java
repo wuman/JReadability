@@ -433,7 +433,7 @@ public class Readability {
 		articleContent.attr("id", "readability-content");
 		int siblingScoreThreshold = Math.max(10,
 				(int) (getContentScore(topCandidate) * 0.2f));
-		Elements siblingNodes = topCandidate.siblingElements();
+		Elements siblingNodes = topCandidate.parent().children();
 		for (Element siblingNode : siblingNodes) {
 			boolean append = false;
 
