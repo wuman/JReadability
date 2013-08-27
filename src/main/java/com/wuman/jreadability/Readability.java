@@ -623,11 +623,12 @@ public class Readability {
 	private static void clean(Element e, String tag) {
 		Elements targetList = getElementsByTag(e, tag);
 		boolean isEmbed = "object".equalsIgnoreCase(tag)
-				|| "embed".equalsIgnoreCase(tag);
+				|| "embed".equalsIgnoreCase(tag)
+                                || "iframe".equalsIgnoreCase(tag);
 
 		for (Element target : targetList) {
 			Matcher matcher = Patterns.get(Patterns.RegEx.VIDEO).matcher(
-					target.html());
+					target.outerHtml());
 			if (isEmbed && matcher.find()) {
 				continue;
 			}
