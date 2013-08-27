@@ -41,7 +41,6 @@
         <maven-eclipse.version>2.9</maven-eclipse.version>
         <maven-release.version>2.3.2</maven-release.version>
         <maven-gpg.version>1.4</maven-gpg.version>
-        <github-downloads.version>0.6</github-downloads.version>
         <github-site-upload.version>0.6</github-site-upload.version>
 
         <jsoup.version>1.7.1</jsoup.version>
@@ -103,25 +102,6 @@
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>downloads-maven-plugin</artifactId>
-                <version>${github-downloads.version}</version>
-                <configuration>
-                    <description>${project.version} release of
-                        ${project.name}</description>
-                    <override>true</override>
-                    <includeAttached>true</includeAttached>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>upload</goal>
-                        </goals>
-                        <phase>deploy</phase>
-                    </execution>
-                </executions>
-            </plugin>
             <plugin>
                 <groupId>com.github.github</groupId>
                 <artifactId>site-maven-plugin</artifactId>
